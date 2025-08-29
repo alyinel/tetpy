@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-sm mt-5">
+                <div class="card-body">
+                    <h2 class="card-title text-center mb-4">Müşteri Düzenle</h2>
+                    <form method="POST" action="{{ url_for('edit_customer', customer_id=customer.id) }}">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Ad-Soyad:</label>
+                            <input type="text" class="form-control" id="name" name="name" value="{{ customer.name }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Telefon:</label>
+                            <input type="text" class="form-control" id="phone" name="phone" value="{{ customer.phone }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Adres:</label>
+                            <input type="text" class="form-control" id="address" name="address" value="{{ customer.address }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="job_type" class="form-label">İş Türü:</label>
+                            <input type="text" class="form-control" id="job_type" name="job_type" value="{{ customer.job_type }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="date" class="form-label">Tarih:</label>
+                            <input type="date" class="form-control" id="date" name="date" value="{{ customer.date }}" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="note" class="form-label">Not:</label>
+                            <textarea class="form-control" id="note" name="note" rows="5">{{ customer.note }}</textarea>
+                        </div>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button type="submit" class="btn btn-primary">Güncelle</button>
+                            <a href="{{ url_for('customer_list') }}" class="btn btn-secondary">İptal</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

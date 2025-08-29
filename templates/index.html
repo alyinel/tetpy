@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold">Tadilat & Boya Badana Hizmetleri</h1>
+        <p class="lead text-muted">Profesyonel boya badana ve tadilat hizmeti sunuyoruz. Temiz işçilik, hızlı teslimat, uygun fiyat politikamızla sizlere hizmet veriyoruz.</p>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4 text-center mb-5">
+        <div class="col">
+            <div class="card h-100 shadow-sm border-0 bg-light">
+                <div class="card-body">
+                    <h3 class="card-title text-muted">Toplam Müşteri</h3>
+                    <p class="card-text display-3 fw-bold text-secondary">{{ total_customers }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 shadow-sm border-0 bg-warning text-white">
+                <div class="card-body">
+                    <h3 class="card-title">Devam Eden İşler</h3>
+                    <p class="card-text display-3 fw-bold">{{ in_progress_customers }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card h-100 shadow-sm border-0 bg-success text-white">
+                <div class="card-body">
+                    <h3 class="card-title">Tamamlanan İşler</h3>
+                    <p class="card-text display-3 fw-bold">{{ completed_customers }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-5 text-center">
+        <h2 class="mb-4 fw-bold">Hizmetlerimiz</h2>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h4 class="card-title text-primary">İç Cephe Boyama</h4>
+                        <p class="card-text">Evinizin veya iş yerinizin iç cephesini modern renklerle ve kaliteli malzemelerle boyuyoruz. Pürüzsüz ve estetik bir görünüm için profesyonel çözümler sunuyoruz.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h4 class="card-title text-primary">Dış Cephe Boyama</h4>
+                        <p class="card-text">Binalarınızın dış cephesini hava koşullarına dayanıklı, uzun ömürlü boyalarla yeniliyoruz. Görsel çekiciliği artırırken, yapınızın korunmasına da katkı sağlıyoruz.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h4 class="card-title text-primary">Alçıpan ve Kartonpiyer</h4>
+                        <p class="card-text">Modern alçıpan uygulamaları ve estetik kartonpiyer detayları ile mekanlarınıza şık ve özgün bir hava katıyoruz. Uzman ekibimizle kaliteli işçilik garantisi veriyoruz.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <h4 class="card-title text-primary">Fayans ve Seramik Döşeme</h4>
+                        <p class="card-text">Banyo, mutfak ve diğer alanlarda fayans ile seramik döşeme işlerinizi titizlikle yapıyoruz. Hem estetik hem de dayanıklı çözümler sunuyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

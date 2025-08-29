@@ -1,0 +1,33 @@
+/* Genel Stiller */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+/* Durum Renkleri (customer_list.html için) */
+.status-beklemede {
+    background-color: #6c757d !important; /* Bootstrap secondary */
+    color: #fff;
+}
+
+.status-devam.ediyor {
+    background-color: #ffc107 !important; /* Bootstrap warning */
+    color: #212529;
+}
+
+.status-tamamlandı {
+    background-color: #198754 !important; /* Bootstrap success */
+    color: #fff;
+}
+
+/* Bazı ek özel stil ayarlamaları veya Bootstrap üzerine yazmalar */
+/* Örneğin, kart gölgelerini biraz daha belirginleştirebiliriz */
+.card.shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important;
+}
+
+.card.shadow-sm.border-0 {
+    border: none;
+}
